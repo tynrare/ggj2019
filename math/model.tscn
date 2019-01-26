@@ -43,8 +43,8 @@ func hand_update():
 	var m = get_node(\"../math\");
 	for i in m.hand:
 		l.text += \"\\nRegion: \" + i.region;
-		for key in i.resources:
-			l.text += \"\\n >> \" + key + \": \" + String(i.resources[key].chance*100) + \"% x\" + String(i.resources[key].count);	
+		for res in i.resources:
+			l.text += \"\\n >> \" + res.type + \": \" + String(res.chance*100) + \"% x\" + String(res.count);	
 
 func _on_Button_pressed():
 	var m = get_node(\"../math\");

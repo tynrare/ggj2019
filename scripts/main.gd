@@ -32,16 +32,17 @@ func _card_played(card):
 	match card.region:
 		"quest1":
 			quest1starter = true
-			print(card);
 			if card.id != "true": 
 				quest1result = false;
 		_:
 			quest1starter = false
+			quest1result = false;
 
 
 func _round_ended():
-	get_node("dialogue_screen").questItem1 = quest1result;
-	get_node("dialogue_screen").questProgress1 = quest1starter;
+	if(math_model.mapRegion == 'quest1'):
+		get_node("dialogue_screen").questItem1 = quest1result;
+		get_node("dialogue_screen").questProgress1 = quest1starter;
 
 func diversificate_math_model():
 	#start quest
@@ -57,4 +58,4 @@ func diversificate_math_model():
 		get_node("map/ui/buttons/go_home_btn").visible = true;
 	elif math_model.roundCounter > 2:
 		quest1result = true;
-		if get_node("dialogue_screen").questItem1 ==false:  math_model.add_deck("quest1");
+		if get_node("dialogue_screen").questItem1 == false:  math_model.add_deck("quest1");

@@ -16,6 +16,7 @@ func _ready():
 func update_scene():
 	#example
 	if gameModel.roundCounter == 0:
+		set_location('BG_attic_rendered')
 		set_character("deer_poses_norm_line_flats")
 		toggle_character_visible()
 		make_monologue_chain("id_sooqa", ["You were on your way downstairs when a knife flew right in front of your face."])
@@ -109,8 +110,11 @@ func _monologue_chain_next(frameId):
 	b.text = "next";
 
 func _remove_all_btns():
-	for c in get_node("buttonsContainer").get_children():
-    	c.queue_free()
+	var b = get_node("buttonsContainer");
+	for c in b.get_children():
+		b.remove_child(c)
+	b.margin_left = 0;
+	
 
 func make_dialogue_btns(id : String, variants : Array):
 	_remove_all_btns();

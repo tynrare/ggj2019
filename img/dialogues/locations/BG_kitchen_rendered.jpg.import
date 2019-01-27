@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/basement.jpg-9fbd41ced24cf1ff18c960485a7b9eef.stex"
+path="res://.import/BG_kitchen_rendered.jpg-6e6f42304e38845a0d3be1ea42502fa6.stex"
 
 [deps]
 
-source_file="res://img/dialogues/locations/basement.jpg"
-dest_files=[ "res://.import/basement.jpg-9fbd41ced24cf1ff18c960485a7b9eef.stex" ]
+source_file="res://img/dialogues/locations/BG_kitchen_rendered.jpg"
+dest_files=[ "res://.import/BG_kitchen_rendered.jpg-6e6f42304e38845a0d3be1ea42502fa6.stex" ]
 
 [params]
 

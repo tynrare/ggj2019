@@ -32,3 +32,4 @@ func diversificate_math_model():
 	if gameModel.roundCounter == 0:
 		gameModel.mapRegion = 'quest';
 		gameModel.regionDecks.quest = [];
+		

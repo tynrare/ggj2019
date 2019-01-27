@@ -70,6 +70,8 @@ func next_turn():
 		var cardsToDraw = min(min(turn, decks_presets.get_deck_props(mapRegion).max_hand_size), cardsLeft);
 		for i in range(cardsToDraw):
 			hand.push_back(regionDecks[mapRegion].pop_front());
+			
+		print(regionDecks[mapRegion].size());
 		
 func play_card(handIndex : int):
 	var playedCard = hand[handIndex];
@@ -88,6 +90,7 @@ func get_resource(chance : float, count : int = 1) -> Dictionary:
 	
 func gen_decks() -> void:
 	for key in avaibleRegions:
+		regionDecks[key] = [];
 		var d = decks_presets.get_deck_cards(key);
 		while d.size():
 			var i = randi()%d.size();

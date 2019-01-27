@@ -34,7 +34,6 @@ func update():
 	get_node("ui/buttons/select_btn").visible = false;
 
 func gen_navpoints():
-	print(math_model.hand)
 	for c in math_model.hand:
 		var p = point_ref.instance();
 		get_node("nav_points").add_child(p);
@@ -75,6 +74,7 @@ func get_base_translation(card) -> Vector2:
 	
 
 func set_ui_text(text : String):
+	print(text);
 	var l = get_node("ui/label")
 	l.visible = true;
 	l.text = text;

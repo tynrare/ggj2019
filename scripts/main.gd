@@ -15,6 +15,7 @@ func enter_to_map():
 	diversificate_math_model();
 	math_model.next_turn();
 	get_node("map").visible = true;
+	get_node("map/ui").visible = true;
 	get_node("map").update_scene();
 	
 func enter_to_home():

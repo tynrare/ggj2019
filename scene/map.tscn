@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=2]
+[gd_scene load_steps=92 format=2]
 
 [ext_resource path="res://scripts/forest_map.gd" type="Script" id=1]
 [ext_resource path="res://scene/LightMap.png" type="Texture" id=2]
@@ -84,6 +84,7 @@
 [ext_resource path="res://scene/LightMap81.png" type="Texture" id=82]
 [ext_resource path="res://scene/trees.tscn" type="PackedScene" id=83]
 [ext_resource path="res://misc/default_theme.tres" type="Theme" id=84]
+[ext_resource path="res://img/forest/house.png" type="Texture" id=85]
 
 [sub_resource type="BakedLightmapData" id=5]
 
@@ -148,6 +149,11 @@ func _process(delta):
 
 bg_color = Color( 0.152941, 0.152941, 0.152941, 0.654902 )
 
+[sub_resource type="SpatialMaterial" id=6]
+
+flags_transparent = true
+params_billboard_mode = 2
+
 [node name="map" type="Spatial"]
 script = ExtResource( 1 )
 
@@ -186,6 +192,7 @@ omni_attenuation = 1.46409
 script = SubResource( 3 )
 
 [node name="trees_pivot" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="trees" parent="trees_pivot" instance=ExtResource( 83 )]
 
@@ -216,6 +223,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 40 )
 [node name="nav_points" type="Spatial" parent="."]
 
 [node name="ui" type="Control" parent="."]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -264,5 +272,15 @@ margin_left = 114.0
 margin_right = 199.0
 margin_bottom = 40.0
 text = "return"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.134038, 2.70516, 2.24635 )
+material_override = SubResource( 6 )
+flip_h = true
+texture = ExtResource( 85 )
+
+[node name="SpotLight" type="SpotLight" parent="Sprite3D"]
+transform = Transform( -0.0500259, -0.717066, 0.695208, -0.0514657, 0.697005, 0.715217, -0.997421, -3.73492e-09, -0.0717726, 1.52846, 1.01018, -0.992776 )
+spot_range = 8.08394
 
 [connection signal="pressed" from="ui/buttons/select_btn" to="." method="_on_select_btn_pressed"]

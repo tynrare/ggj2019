@@ -130,18 +130,18 @@ func _navpoint_selected(point, card_id):
 	var card = math_model.hand[card_id];
 	selected_point = null;
 	selected_card_id = null;
+	character_target = point.translation
+	
 	_clear_navpoints();
 	
 	if card.has("story"):
 		set_ui_text(card.story);
-		cam_target.x += 20;
 		cam_target_angle = -40;
 		cam_target_fow = 30;
 		yield(get_tree().create_timer(2), "timeout")
 	else:
 		get_node("ui/label").visible = false;
 	
-	character_target = point.translation
 	yield(get_tree().create_timer(2), "timeout")
 	
 	_discard_camera_targets();

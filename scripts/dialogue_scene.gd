@@ -3,6 +3,7 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+var questItem0 = false;
 var questItem1 = false;
 var questItem2 = false;
 var questItem3 = false;
@@ -18,7 +19,7 @@ func update_scene():
 	if math_model.roundCounter == 1:
 		toggle_character_visible()
 		set_character("deer_flats")
-		set_location('BG_attic_rendered')
+		set_location('BG_fireplace')
 		make_monologue_chain("id_sooqa2", [ "A house comes out of nowhere.", "Praying for the best, you put the key into the keyhole and spin in several times before opening the antique door and rushing in.", "Any other day you probably would have taken your sweet time looking around the house you have just entered, but right now you find yourself very focused.", "Your attention is occupied by a fireplace.", "You feel like you have no control over your body, as it takes you straightnas it takes you straight to the pile of woods and starts the fire.",
 		"After several minutes of warming yourself up you decide to open the book that was lying nearby.","- It's impolite to read someone's journal, you know?", "The voice is very loud.", "Loud enough to make you drop the book and start looking around for the source of it", "- Look up.", "You gaze at the ceiling only to see nothing.", "- Oh come on, is it your brain that’s got frozen or your ears?"])
 		yield(self, "chain_finished")
@@ -30,13 +31,14 @@ func update_scene():
 		"The message is quite clear.", "Someone wants you to get something from outside because this someone can’t get out.", "Reminds you of your mother when her favorite TV show is on air.",
 		"- Moreover, your body shape and the complete emptiness in your eyes suggests you are human.", "- That means you probably have some needs like food, warmth and so on.", "- So, for your own sake I encourage you to take a look around the house for anything we need.", "The Deer pensively mumbles for several seconds and carries on:", "- According to my experience and calculation, it will take two fuel units per day to keep warm, two food portions each day to keep your stomach full.", "- Also, 1 torch lasts for approximately for the night. It takes two firewood to make 1 torch.", "- Oh, and take this." ,"A strange green shiny amulet falls right into your hands.", "- In case you run out of torches, or wonder somewhere deep in the forest, or get caught by a blizzard...just keep it close, alright? I'll do the rest.", ".....................", "- What are you staring at? Come on."])
 		yield(self, "chain_finished")
+		questItem0 = true;
 		toggle_character_visible()
 		get_node("..").enter_to_map()
 		
 	if math_model.roundCounter == 2:
 		toggle_character_visible()
 		set_character("deer_poses_norm_line_flats")
-		set_location('basement')
+		set_location('BG_fireplace')
 		make_monologue_chain("id2", ["You are getting used to waking up without snow on your nose. This time though, you have a strange feeling.",  "After a brief look around, you realize that the Deer’s head is missing.", "You freeze for a moment and try to listen closely only to catch some strange sounds from the basement.", "Struggling to find another option, you rush towards the source of the sound."])
 		yield(self, "chain_finished")
 		set_location('BG_basement_rendered')

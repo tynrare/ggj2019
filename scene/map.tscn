@@ -118,7 +118,6 @@ tonemap_white = 1.6
 auto_exposure_scale = 0.2
 auto_exposure_max_luma = 2.71
 auto_exposure_speed = 2.42
-ssao_enabled = true
 ssao_radius2 = 1.0
 ssao_bias = 0.001
 ssao_light_affect = 1.0

@@ -34,7 +34,7 @@ var _decks = {
 	"quest1":{
 		"cards": [],
 		"props":{
-			"max_hand_size": 1,
+			"max_hand_size": 3,
 			"straight_order":true
 		}
 	}
@@ -93,15 +93,22 @@ func _ready():
 	#
 	# Quests
 	#
-	_add_card_story("tutorial", "Intro blah blah");
-	_add_card_story("tutorial", "Go there");
-	_add_card_story("tutorial", "Go here");
+	_add_card_story("tutorial", "It seems you are lost. You have no idea where are you heading.");
+	_add_card_story("tutorial", "Your can't feel any fingers on your body, you have to find a shelter.");
+	_add_card_story("tutorial", "Wait, what's that light?");
 	
-
-	_add_card_story("quest1", "Outro blah blah", "Super quest");
-	_add_card_story("quest1", "Go there");
-	_add_card_story("quest1", "Go here");
-	_add_card_story("quest1", "3");
+	_add_card_story("quest1", "You move further in the forest", "Go forward", "true");
+	_add_card_story("quest1", "You decided to go closer the creek", "Come closer to the creek", "true" );
+	_add_card_story("quest1", "You decide not to take any risks", "Stay a little further", "true");
+	_add_card_story("quest1", "You make a gigantic leap over. Could have just stepped over, by the way. ", "Jump over the creek", "true");
+	_add_card_story("quest1", "You decided to go down the creek", "Follow the creek's course", "false");
+	_add_card_story("quest1", "You have just crossed the creek", "Step over the creek", "true");
+	_add_card_story("quest1", "Great. Next action?", "Walk for 350 meters", "true");
+	_add_card_story("quest1", "Great. Next action?", "Walk for 300 meters", "false");
+	_add_card_story("quest1", "Great. Next action?", "Walk for 450 meters", "false");
+	_add_card_story("quest1", "You make a gigantic leap over ", "Turn left", "false");
+	_add_card_story("quest1", "You decided to go down the creek", "Turn right", "true");
+	_add_card_story("quest1", "You have just crossed the creek", "Go forward", "false" );
 
 func _mr(chance : float, count : int = 1, type : String = "") -> Dictionary:
 	return {"chance": chance, "count": count, "type": type}
@@ -112,11 +119,12 @@ func _add_card_d(region : String, list : Array):
 		"region": region
 	});
 
-func _add_card_story(region : String, text : String, description : String = "", resources : Array = []):
+func _add_card_story(region : String, text : String, description : String = "", id : String = "", resources : Array = []):
 	var c = {
 		"resources":resources,
 		"story": text,
-		"region": region
+		"region": region,
+		"id": id
 	};
 	if description.length() > 0:
 		c.description = description;

@@ -20,7 +20,7 @@ func update_scene():
 		toggle_character_visible()
 		set_character("deer_flats")
 		set_location('BG_fireplace')
-		make_monologue_chain("id_sooqa2", [ "A house comes out of nowhere.", "Praying for the best, you put the key into the keyhole and spin in several times before opening the antique door and rushing in.", "Any other day you probably would have taken your sweet time looking around the house you have just entered, but right now you find yourself very focused.", "Your attention is occupied by a fireplace.", "You feel like you have no control over your body, as it takes you straightnas it takes you straight to the pile of woods and starts the fire.",
+		make_monologue_chain("id_sooqa2", ["You can't believe how lucky you are", "You have been freezing for several hours", "Any other day you probably would have taken your time looking around the house you have just entered, but right now you find yourself very focused.", "Your attention is occupied by a fireplace.", "You feel like you have no control over your body, as it takes you straightnas it takes you straight to the pile of woods and starts the fire.",
 		"After several minutes of warming yourself up you decide to open the book that was lying nearby.","- It's impolite to read someone's journal, you know?", "The voice is very loud.", "Loud enough to make you drop the book and start looking around for the source of it", "- Look up.", "You gaze at the ceiling only to see nothing.", "- Oh come on, is it your brain that’s got frozen or your ears?"])
 		yield(self, "chain_finished")
 		toggle_character_visible()
@@ -35,7 +35,7 @@ func update_scene():
 		toggle_character_visible()
 		get_node("..").enter_to_map()
 		
-	if math_model.roundCounter == 2:
+	if math_model.roundCounter == 2 && questItem0 == true:
 		toggle_character_visible()
 		set_character("deer_poses_norm_line_flats")
 		set_location('BG_fireplace')
@@ -43,6 +43,7 @@ func update_scene():
 		yield(self, "chain_finished")
 		set_location('BG_basement_rendered')
 		make_monologue_chain("id_sooqa", ["You are on your way downstairs when a knife flows right in front of your face."])
+		
 
 func set_location(name : String):
 	get_node("back").texture = load("res://img/dialogues/locations/"+name+".jpg");

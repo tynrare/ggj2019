@@ -5,6 +5,7 @@ extends Node
 # var b = "text"
 
 signal card_played
+signal round_ended
 
 #properties
 var roundCost = {
@@ -52,6 +53,8 @@ func begin_round():
 	gen_decks();
 	
 func end_round():
+	emit_signal("round_ended")
+	
 	playing = false;
 	for key in roundCost:
 		inventory[key] -= roundCost[key];

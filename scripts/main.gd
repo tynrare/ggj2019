@@ -8,6 +8,7 @@ extends Node
 func _ready():
 	enter_to_map();
 	math_model.connect("card_played", self, "_card_played");
+	math_model.connect("round_ended", self, "_round_ended");
 	pass # Replace with function body.
 
 func enter_to_map():
@@ -25,10 +26,15 @@ func enter_to_home():
 	get_node("map").visible = false;
 	get_node("map/ui").visible = false;
 
+var quest1result = true;
 func _card_played(card):
 	match card.region:
 		"quest1":
-			print(card);
+			if card.id != "true": 
+				quest1result = false;
+
+func _round_ended():
+	pass
 
 func diversificate_math_model():
 	#start quest

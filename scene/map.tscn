@@ -66,26 +66,41 @@ script = ExtResource( 1 )
 environment = SubResource( 2 )
 
 [node name="cam_pivot" type="Spatial" parent="WorldEnvironment"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 30, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 30, 0 )
 
 [node name="Camera" type="Camera" parent="WorldEnvironment/cam_pivot"]
 transform = Transform( -2.8213e-07, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 1.41065e-07, -2.44332e-07, 0, 0, 0 )
 current = true
 fov = 50.0
 
-[node name="OmniLight" type="OmniLight" parent="."]
+[node name="character" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55283, 5.1907, 3.0241 )
 light_color = Color( 1, 0.513726, 0, 1 )
 light_energy = 5.0
 light_bake_mode = 2
 shadow_enabled = true
-omni_range = 10.4724
+omni_range = 7.0
 omni_attenuation = 1.46409
 script = SubResource( 3 )
 
 [node name="trees_pivot" type="Spatial" parent="."]
 
 [node name="trees" parent="trees_pivot" instance=ExtResource( 2 )]
+
+[node name="trees7" parent="trees_pivot" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 0 )
+
+[node name="trees8" parent="trees_pivot" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 40 )
+
+[node name="trees9" parent="trees_pivot" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, -40 )
+
+[node name="trees5" parent="trees_pivot" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40 )
+
+[node name="trees6" parent="trees_pivot" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -40 )
 
 [node name="trees2" parent="trees_pivot" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0 )
@@ -135,3 +150,4 @@ margin_right = 85.0
 margin_bottom = 40.0
 text = "return"
 
+[connection signal="pressed" from="ui/buttons/select_btn" to="." method="_on_select_btn_pressed"]

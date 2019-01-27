@@ -12,7 +12,7 @@ func _ready():
 func enter_to_map():
 	get_node("dialogue_screen").visible = false;
 	math_model.begin_round();
-	diversificate_math_model();
+	#diversificate_math_model();
 	math_model.next_turn();
 	get_node("map").visible = true;
 	get_node("map").update_scene();

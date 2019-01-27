@@ -16,7 +16,7 @@ func _ready():
 func update_scene():
 	#example
 	if gameModel.roundCounter == 0:
-		set_location('BG_attic_rendered')
+		set_location('BG_basement_rendered')
 		set_character("deer_poses_norm_line_flats")
 		toggle_character_visible()
 		make_monologue_chain("id_sooqa", ["You were on your way downstairs when a knife flew right in front of your face."])
@@ -31,7 +31,12 @@ func set_character(name : String):
 	get_node("character").texture = load("res://img/dialogues/characters/"+name+".png");
 	
 func set_text(text : String):
-	get_node("textPanel/label").text = text;
+	var l = get_node("textPanel/label");
+	l.text = text;
+	if text[0] == '-':
+		l.add_color_override("font_color", Color(1, 1, 0))
+	else:
+		l.add_color_override("font_color", Color(1, 1, 1))
 	
 func _dialogue_selected(frameId : String, selectId : int):
 	match frameId:

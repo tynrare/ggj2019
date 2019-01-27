@@ -75,6 +75,7 @@ func get_base_translation(card) -> Vector2:
 	
 
 func set_ui_text(text : String):
+	print(text);
 	var l = get_node("ui/label")
 	l.visible = true;
 	l.text = text;

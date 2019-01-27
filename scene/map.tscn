@@ -223,7 +223,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 40 )
 [node name="nav_points" type="Spatial" parent="."]
 
 [node name="ui" type="Control" parent="."]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -233,10 +232,10 @@ theme = ExtResource( 84 )
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 50.0
-margin_top = -200.0
-margin_right = -50.0
-margin_bottom = -50.0
+margin_left = 49.0975
+margin_top = -200.902
+margin_right = -50.9025
+margin_bottom = -50.9025
 custom_styles/normal = SubResource( 4 )
 align = 1
 valign = 1

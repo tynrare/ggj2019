@@ -10,7 +10,8 @@ script = ExtResource( 1 )
 
 [node name="dialogue_screen" parent="." instance=ExtResource( 2 )]
 
-[node name="map" parent="." instance=ExtResource( 3 )]
+[node name="map_test" parent="." instance=ExtResource( 3 )]
+visible = false
 
-[node name="map_prod" parent="." instance=ExtResource( 4 )]
+[node name="map" parent="." instance=ExtResource( 4 )]
 

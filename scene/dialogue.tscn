@@ -1,31 +1,19 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://misc/font/Comfortaa-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://misc/default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://scripts/dialogue_scene.gd" type="Script" id=2]
 [ext_resource path="res://img/dialogues/locations/BG_basement_rendered.jpg" type="Texture" id=3]
-[ext_resource path="res://img/dialogues/characters/deer_flats.png" type="Texture" id=4]
+[ext_resource path="res://misc/font/default.tres" type="DynamicFont" id=4]
+[ext_resource path="res://img/dialogues/characters/deer_flats.png" type="Texture" id=5]
 
-[sub_resource type="DynamicFont" id=2]
-
-size = 25
-outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 1 )
-
-[sub_resource type="Theme" id=3]
-
-default_font = SubResource( 2 )
-
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=2]
 
 bg_color = Color( 0.152941, 0.152941, 0.152941, 0.654902 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = SubResource( 3 )
+theme = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="back" type="TextureRect" parent="."]
@@ -43,7 +31,7 @@ margin_left = 50.0
 margin_top = -200.0
 margin_right = -50.0
 margin_bottom = -50.0
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 
 [node name="label" type="Label" parent="textPanel"]
 anchor_right = 1.0
@@ -52,7 +40,7 @@ margin_left = 500.0
 margin_top = 20.0
 margin_right = -20.0
 margin_bottom = -20.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "dspoj'fpodfgpofd'pojgasd"
 autowrap = true
@@ -62,7 +50,7 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -694.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 3
 
 [node name="buttonsContainer" type="VBoxContainer" parent="."]

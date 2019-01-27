@@ -86,9 +86,9 @@ func _ready():
 	#
 	# Quests
 	#
-	_add_card_spec("tutorial", "Intro blah blah");
-	_add_card_spec("tutorial", "Go there");
-	_add_card_spec("tutorial", "Go here");
+	_add_card_story("tutorial", "Intro blah blah");
+	_add_card_story("tutorial", "Go there");
+	_add_card_story("tutorial", "Go here");
 
 func _mr(chance : float, count : int = 1, type : String = "") -> Dictionary:
 	return {"chance": chance, "count": count, "type": type}
@@ -99,10 +99,10 @@ func _add_card_d(region : String, list : Array):
 		"region": region
 	});
 
-func _add_card_spec(region : String, text : String, resources : Array = []):
+func _add_card_story(region : String, text : String, resources : Array = []):
 	_decks[region].cards.push_back({
 		"resources":resources,
-		"description": text,
+		"story": text,
 		"region": region
 	});
 

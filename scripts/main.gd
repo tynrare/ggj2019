@@ -21,6 +21,7 @@ func enter_to_home():
 	get_node("dialogue_screen").visible = true;
 	get_node("dialogue_screen").update_scene();
 	get_node("map").visible = false;
+	get_node("map/ui").visible = false;
 
 func diversificate_math_model():
 	#start quest

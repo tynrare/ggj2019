@@ -61,7 +61,7 @@ func next_turn():
 	
 	if mapRegion == null:
 		for i in avaibleRegions:
-			hand.push_back(regionDecks[i].pop_back());
+			hand.push_back(regionDecks[i].pop_front());
 	else:
 		var cardsLeft = regionDecks[mapRegion].size();
 		if cardsLeft == 0:
@@ -90,11 +90,22 @@ func get_resource(chance : float, count : int = 1) -> Dictionary:
 	
 func gen_decks() -> void:
 	for key in avaibleRegions:
-		regionDecks[key] = [];
-		var d = decks_presets.get_deck_cards(key);
+		add_deck(key);
+			
+func add_deck(type : String) -> void:
+	if math_model.avaibleRegions.find(type) == -1:
+		math_model.avaibleRegions.push_back(type);
+		
+	regionDecks[type] = [];
+	var d = decks_presets.get_deck_cards(type);
+	
+	var prop = decks_presets.get_deck_props(type)
+	if prop.has('straight_order') && prop.straight_order:
+		regionDecks[type] = d
+	else:
 		while d.size():
 			var i = randi()%d.size();
-			regionDecks[key].push_back(d[i]);
+			regionDecks[type].push_back(d[i]);
 			d.remove(i);
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

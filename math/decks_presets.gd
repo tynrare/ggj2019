@@ -30,6 +30,13 @@ var _decks = {
 		"props":{
 			"max_hand_size": 1,
 		}
+	},
+	"quest1":{
+		"cards": [],
+		"props":{
+			"max_hand_size": 1,
+			"straight_order":true
+		}
 	}
 }
 
@@ -89,6 +96,12 @@ func _ready():
 	_add_card_story("tutorial", "Intro blah blah");
 	_add_card_story("tutorial", "Go there");
 	_add_card_story("tutorial", "Go here");
+	
+
+	_add_card_story("quest1", "Outro blah blah", "Super quest");
+	_add_card_story("quest1", "Go there");
+	_add_card_story("quest1", "Go here");
+	_add_card_story("quest1", "3");
 
 func _mr(chance : float, count : int = 1, type : String = "") -> Dictionary:
 	return {"chance": chance, "count": count, "type": type}
@@ -99,12 +112,16 @@ func _add_card_d(region : String, list : Array):
 		"region": region
 	});
 
-func _add_card_story(region : String, text : String, resources : Array = []):
-	_decks[region].cards.push_back({
+func _add_card_story(region : String, text : String, description : String = "", resources : Array = []):
+	var c = {
 		"resources":resources,
 		"story": text,
 		"region": region
-	});
+	};
+	if description.length() > 0:
+		c.description = description;
+		
+	_decks[region].cards.push_back(c);
 
 #old style func
 func _add_card(region : String, wood, food, coal):

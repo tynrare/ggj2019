@@ -61,7 +61,7 @@ func get_base_translation(card) -> Vector2:
 			"food":
 				return Vector2(1, math_model.turn);
 			_:
-				return Vector2(0, math_model.turn);
+				return Vector2(0, math_model.turn + 3); 
 	else:
 		match math_model.mapRegion:
 			"tutorial":

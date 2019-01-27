@@ -36,5 +36,10 @@ func diversificate_math_model():
 		math_model.mapRegion = 'tutorial';
 		math_model.regionDecks.tutorial = decks_presets.get_deck_cards("tutorial");
 	elif math_model.roundCounter == 2:
+		
+		math_model.inventory.wood = 2;
+		math_model.inventory.food = 2;
+		math_model.inventory.coal = 2;
+		
 		get_node("map/ui/buttons/go_home_btn").visible = true;
 		math_model.add_deck("quest1");

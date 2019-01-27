@@ -19,9 +19,9 @@ var turn = 0
 var roundCounter = 0
 
 var inventory = {
-	"wood": 2,
-	"food": 2,
-	"coal": 2
+	"wood": 0,
+	"food": 0,
+	"coal": 0
 }
 
 var regionDecks = {

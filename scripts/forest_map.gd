@@ -49,7 +49,7 @@ func gen_navpoints():
 			var x = c.translation.x
 			if x < closest:
 				closest = x;
-		cam_target.x = closest + 10
+		cam_target.x = closest + 5
 
 func get_base_translation(card) -> Vector2:
 	if math_model.mapRegion == null:
@@ -135,6 +135,7 @@ func _navpoint_selected(point, card_id):
 	
 	if card.has("story"):
 		set_ui_text(card.story);
+		cam_target.x = point.translation.x + 5;
 		cam_target_angle = -40;
 		cam_target_fow = 30;
 		yield(get_tree().create_timer(2), "timeout")

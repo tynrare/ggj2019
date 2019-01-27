@@ -124,6 +124,7 @@ disabled = true
 text = "new turn"
 
 [node name="Panel" type="Panel" parent="view"]
+editor/display_folded = true
 margin_right = 606.0
 margin_bottom = 375.0
 
@@ -161,6 +162,7 @@ margin_bottom = 14.0
 text = "turn: 0"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="view"]
+editor/display_folded = true
 margin_left = 139.195
 margin_top = 520.17
 margin_right = 255.195

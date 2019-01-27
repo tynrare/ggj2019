@@ -9,6 +9,8 @@ func _ready():
 	_add_card_d("wood", [ _mr(0.5, 1, "wood"), _mr(0.5, 1, "wood") ]);
 	_add_card("wood", _mr(0.7), null, _mr(0.1, 2));
 	_add_card("wood", _mr(0.7), _mr(0.1, 2), _mr(0.1, 2));
+	_add_card("wood", _mr(0.7), _mr(0.1, 2), _mr(0.1, 2));
+	_add_card("wood", _mr(0.7), _mr(0.1, 2), _mr(0.1, 2));
 	_add_card("coal", _mr(0.7), _mr(0.1, 2), _mr(0.1, 2));
 	_add_card("coal", _mr(0.7), _mr(0.1, 2), _mr(0.1, 2));
 	_add_card("coal", _mr(0.7), _mr(0.1, 2), _mr(0.1, 2));

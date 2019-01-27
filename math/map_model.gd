@@ -9,7 +9,7 @@ var maxHandSize = 5;
 
 var roundCost = {
 	"wood": 2,
-	"food": 1,
+	"food": 2,
 	"coal": 2
 }
 var avaibleRegions = ["wood", "coal", "food"]
@@ -20,7 +20,7 @@ var roundCounter = 0
 
 var inventory = {
 	"wood": 2,
-	"food": 1,
+	"food": 2,
 	"coal": 2
 }
 
@@ -37,7 +37,6 @@ var mapRegion = null;
 func _ready():
 	turn = 0;
 	roundCounter = 0;
-	begin_round();
 	pass # Replace with function body.
 
 func begin_round():
@@ -55,7 +54,7 @@ func next_turn():
 	
 	hand = [];
 	
-	if turn == 1:
+	if mapRegion == null:
 		for i in avaibleRegions:
 			hand.push_back(regionDecks[i].pop_back());
 	else:
@@ -71,7 +70,7 @@ func next_turn():
 func play_card(handIndex : int):
 	var playedCard = hand[handIndex];
 	
-	if turn == 1:
+	if mapRegion == null:
 		mapRegion = playedCard.region
 	
 	for res in playedCard.resources:

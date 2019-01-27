@@ -7,6 +7,7 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	enter_to_map();
+	math_model.connect("card_played", self, "_card_played");
 	pass # Replace with function body.
 
 func enter_to_map():
@@ -24,9 +25,13 @@ func enter_to_home():
 	get_node("map").visible = false;
 	get_node("map/ui").visible = false;
 
+func _card_played(card):
+	match card.region:
+		"quest1":
+			print(card);
+
 func diversificate_math_model():
 	#start quest
-	print(1)
 	if math_model.roundCounter == 10:
 		math_model.mapRegion = 'tutorial';
 		math_model.regionDecks.tutorial = decks_presets.get_deck_cards("tutorial");

@@ -4,6 +4,8 @@ extends Node
 # var a = 2
 # var b = "text"
 
+signal card_played
+
 #properties
 var roundCost = {
 	"wood": 2,
@@ -71,10 +73,10 @@ func next_turn():
 		for i in range(cardsToDraw):
 			hand.push_back(regionDecks[mapRegion].pop_front());
 			
-		print(regionDecks[mapRegion].size());
-		
 func play_card(handIndex : int):
 	var playedCard = hand[handIndex];
+	
+	emit_signal("card_played", playedCard)
 	
 	if mapRegion == null:
 		mapRegion = playedCard.region

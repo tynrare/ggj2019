@@ -74,7 +74,6 @@ func get_base_translation(card) -> Vector2:
 	
 
 func set_ui_text(text : String):
-	print(text);
 	var l = get_node("ui/label")
 	l.visible = true;
 	l.text = text;
@@ -93,7 +92,6 @@ var selected_point = null
 var selected_card_id = null
 
 func _on_select_btn_pressed():
-	print(selected_card_id, selected_point);
 	if selected_point == null || selected_card_id == null:
 		return
 	
@@ -119,7 +117,8 @@ func _navpoint_clicked(point, card_id):
 		if card.resources.size() > 0:
 			text += "Region: " + card.region;
 			for res in card.resources:
-				text += "\n >> " + res.type + ": " + String(res.chance*100) + "% x" + String(res.count);
+				if res.chance > 0:
+					text += "\n >> " + res.type + ": " + String(res.chance*100) + "% x" + String(res.count);
 		if card.has("description"):
 			text += card.description;
 		

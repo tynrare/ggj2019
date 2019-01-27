@@ -49,7 +49,7 @@ func update_scene():
 	if math_model.roundCounter > 2 && questItem1 == true:
 		set_character("deer_poses_thinking_flats")
 		set_location('BG_basement_rendered')
-		make_monologue_chain("finisher", ["krasav"])
+		make_monologue_chain("finisher", ["- Found it?", "- Good.", "- I am used this one. Have been using to protect myself for nearly all my life.", "- Always was afraid of not being able to provide safety for myself.", "- Taking my condition into account..", "- It's the only place I can feel safe.", "- Does it mean it is home for me?", "- What do you think?", "- Is home for you is a place where you are safe?", "............", "............", "(And you might get the chance to answer it)", "(Hey, it's the message from the team (mostly from the narrative guy))", "(Due to some struggles we could not finish this game as we wanted to and explore the idea of what home means to everyone, but we would really like to.)", "( We had some philosophical concepts for the plot and some new character designs that should have been put in)", "(DeerBeaver was not the only one)", "(Yes, the head of the dear and the body of a really long beaver)", "(Personally I would love to get this story to an end, and If you feel a little intrigued, let us know about it.)", "( I'm sure this will be just enough for us to crawl some time out of our schedules to get back together and finish our story)", "( I guess, that's all I had to say. Thanks for playing. Have a nice day.)" ])
 		
 	elif math_model.roundCounter > 2 && questItem1 == false && questProgress1 == false:
 		set_character("deer_poses_thinking_flats")
@@ -61,7 +61,7 @@ func update_scene():
 	elif math_model.roundCounter > 2 && questItem1 == false && questProgress1 == true:
 		set_character("deer_poses_arms_flats")
 		set_location('BG_basement_rendered')
-		make_monologue_chain("finisher2", ["There are no words to deer-scribe how I am both amazed by your stupidity and horrified by your intellectual capabilities. Like", "- how did you manage to screw that up?", "- Alright, let's try again.", "-  Go west from here. You will reach a small creek. Jump over it and walk about 350 meters, then turn right. The dagger is shiny, you’ll definitely notice it.", "- Please, don't blow it up this time."])
+		make_monologue_chain("finisher2", ["- There are no words to deer-scribe how I am both amazed by your stupidity and horrified by your intellectual capabilities. Like", "- how did you manage to screw that up?", "- Alright, let's try again.", "-  Go west from here. You will reach a small creek. Jump over it and walk about 350 meters, then turn right. The dagger is shiny, you’ll definitely notice it.", "- Please, don't blow it up this time."])
 		questProgress1 = false
 		yield(self, "chain_finished")
 		get_node("..").enter_to_map()

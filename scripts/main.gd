@@ -13,7 +13,6 @@ func _ready():
 
 func enter_to_map():
 	get_node("dialogue_screen").visible = false;
-	math_model.roundCounter = 3;
 	math_model.begin_round();
 	diversificate_math_model();
 	math_model.next_turn();
@@ -57,5 +56,5 @@ func diversificate_math_model():
 		
 		get_node("map/ui/buttons/go_home_btn").visible = true;
 	elif math_model.roundCounter > 2:
-		quest1result = true
+		quest1result = true;
 		if get_node("dialogue_screen").questItem1 ==false:  math_model.add_deck("quest1");

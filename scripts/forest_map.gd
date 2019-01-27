@@ -34,7 +34,6 @@ func update():
 	get_node("ui/buttons/select_btn").visible = false;
 
 func gen_navpoints():
-	print(math_model.hand)
 	for c in math_model.hand:
 		var p = point_ref.instance();
 		get_node("nav_points").add_child(p);

@@ -106,9 +106,9 @@ func _ready():
 	_add_card_story("quest1", "Great. Next action?", "Walk for 350 meters", "true");
 	_add_card_story("quest1", "Great. Next action?", "Walk for 300 meters", "false");
 	_add_card_story("quest1", "Great. Next action?", "Walk for 450 meters", "false");
-	_add_card_story("quest1", "You make a gigantic leap over ", "Turn left", "false");
-	_add_card_story("quest1", "You decided to go down the creek", "Turn right", "true");
-	_add_card_story("quest1", "You have just crossed the creek", "Go forward", "false" );
+	_add_card_story("quest1", "Have you found anything?", "Turn left", "false");
+	_add_card_story("quest1", "Have you found anything?", "Turn right", "true");
+	_add_card_story("quest1", "Have you found anything?", "Go forward", "false" );
 
 func _mr(chance : float, count : int = 1, type : String = "") -> Dictionary:
 	return {"chance": chance, "count": count, "type": type}

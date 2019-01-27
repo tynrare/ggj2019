@@ -5,7 +5,7 @@ extends Control
 # var a = 2
 # var b = "text"
 var questItem0 = false;
-var questPogress1 = false;
+var questProgress1 = false;
 var questItem1 = false;
 var questItem2 = false;
 var questItem3 = false;
@@ -22,7 +22,7 @@ func update_scene():
 		toggle_character_visible()
 		set_character("deer_flats")
 		set_location('BG_fireplace')
-		make_monologue_chain("id_sooqa2", ["You can't believe how lucky you are", "You have been freezing for several hours", "Any other day you probably would have taken your time looking around the house you have just entered, but right now you find yourself very focused.", "Your attention is occupied by a fireplace.", "You feel like you have no control over your body, as it takes you straightnas it takes you straight to the pile of woods and starts the fire.",
+		make_monologue_chain("id_sooqa2", ["You can't believe how lucky you are.", "You have been freezing for several hours.", "Any other day you probably would have taken your time looking around the house you have just entered, but right now you find yourself very focused.", "Your attention is occupied by a fireplace.", "You feel like you have no control over your body, as it takes you straightnas it takes you straight to the pile of woods and starts the fire.",
 		"After several minutes of warming yourself up you decide to open the book that was lying nearby.","- It's impolite to read someone's journal, you know?", "The voice is very loud.", "Loud enough to make you drop the book and start looking around for the source of it", "- Look up.", "You gaze at the ceiling only to see nothing.", "- Oh come on, is it your brain that’s got frozen or your ears?"])
 		yield(self, "chain_finished")
 		toggle_character_visible()
@@ -36,7 +36,7 @@ func update_scene():
 		questItem0 = true;
 		toggle_character_visible()
 		get_node("..").enter_to_map()
-		
+	print(questItem1);	
 	if math_model.roundCounter == 2 && questItem0 == true:
 		toggle_character_visible()
 		set_character("deer_poses_norm_line_flats")
@@ -51,11 +51,20 @@ func update_scene():
 		set_location('BG_basement_rendered')
 		make_monologue_chain("finisher", ["krasav"])
 		
+	elif math_model.roundCounter > 2 && questItem1 == false && questProgress1 == false:
+		set_character("deer_poses_thinking_flats")
+		set_location('BG_fireplace')
+		make_monologue_chain("finisher3", ["You're doing well so far."])
+		yield(self, "chain_finished")
+		get_node("..").enter_to_map()
 		
-	if math_model.roundCounter > 2 && questItem1 == false:
+	elif math_model.roundCounter > 2 && questItem1 == false && questProgress1 == true:
 		set_character("deer_poses_arms_flats")
 		set_location('BG_basement_rendered')
-		make_monologue_chain("finisher2", ["jopa"])
+		make_monologue_chain("finisher2", ["There are no words to deer-scribe how I am both amazed by your stupidity and horrified by your intellectual capabilities. Like", "- how did you manage to screw that up?", "- Alright, let's try again.", "-  Go west from here. You will reach a small creek. Jump over it and walk about 350 meters, then turn right. The dagger is shiny, you’ll definitely notice it.", "- Please, don't blow it up this time."])
+		questProgress1 = false
+		yield(self, "chain_finished")
+		get_node("..").enter_to_map()
 		
 		
 		

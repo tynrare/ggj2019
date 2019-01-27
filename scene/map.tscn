@@ -69,7 +69,7 @@ environment = SubResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 30, 0 )
 
 [node name="Camera" type="Camera" parent="WorldEnvironment/cam_pivot"]
-transform = Transform( -1.62921e-07, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 8.14603e-08, -1.41093e-07, 0, 0, 0 )
+transform = Transform( -2.8213e-07, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 1.41065e-07, -2.44332e-07, 0, 0, 0 )
 current = true
 fov = 50.0
 
@@ -83,7 +83,18 @@ omni_range = 10.4724
 omni_attenuation = 1.46409
 script = SubResource( 3 )
 
-[node name="trees" parent="." instance=ExtResource( 2 )]
+[node name="trees_pivot" type="Spatial" parent="."]
+
+[node name="trees" parent="trees_pivot" instance=ExtResource( 2 )]
+
+[node name="trees2" parent="trees_pivot" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0 )
+
+[node name="trees3" parent="trees_pivot" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, -40 )
+
+[node name="trees4" parent="trees_pivot" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 40 )
 
 [node name="nav_points" type="Spatial" parent="."]
 
@@ -93,14 +104,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -146.0
 theme = ExtResource( 3 )
-
-[node name="Button" type="Button" parent="ui"]
-visible = false
-margin_left = 50.0
-margin_top = -40.0
-margin_right = 113.0
-margin_bottom = -10.0
-text = "go home"
 
 [node name="label" type="Label" parent="ui"]
 visible = false
@@ -113,4 +116,22 @@ custom_styles/normal = SubResource( 4 )
 align = 1
 valign = 1
 autowrap = true
+
+[node name="buttons" type="HBoxContainer" parent="ui"]
+margin_left = 50.0
+margin_top = -50.0
+margin_right = 100.0
+margin_bottom = -10.0
+
+[node name="select_btn" type="Button" parent="ui/buttons"]
+visible = false
+margin_right = 110.0
+margin_bottom = 40.0
+text = "go there"
+
+[node name="go_home_btn" type="Button" parent="ui/buttons"]
+visible = false
+margin_right = 85.0
+margin_bottom = 40.0
+text = "return"
 

@@ -28,3 +28,5 @@ func diversificate_math_model():
 	if math_model.roundCounter == 1:
 		math_model.mapRegion = 'tutorial';
 		math_model.regionDecks.tutorial = decks_presets.get_deck_cards("tutorial");
+	elif math_model.roundCounter == 2:
+		get_node("map/ui/buttons/go_home_btn").visible = true;

@@ -16,10 +16,17 @@ func _ready():
 func update_scene():
 	#example
 	if math_model.roundCounter == 1:
-	#	toggle_character_visible()
+		toggle_character_visible()
 		set_character("deer_flats")
 		set_location('BG_attic_rendered')
-		make_monologue_chain("id_sooqa2", [ "A house comes out of nowhere.", "Praying for the best, you put the key into the keyhole and spin in several times before opening the antique door and rushing in.", "Any other day you probably would have taken your sweet time looking around the house you have just entered, but right now you find yourself very focused.", "Your attention is occupied by a fireplace.", "You feel like you have no control over your body, as it takes you straightnas it takes you straight to the pile of woods and starts the fire."])
+		make_monologue_chain("id_sooqa2", [ "A house comes out of nowhere.", "Praying for the best, you put the key into the keyhole and spin in several times before opening the antique door and rushing in.", "Any other day you probably would have taken your sweet time looking around the house you have just entered, but right now you find yourself very focused.", "Your attention is occupied by a fireplace.", "You feel like you have no control over your body, as it takes you straightnas it takes you straight to the pile of woods and starts the fire.",
+		"After several minutes of warming yourself up you decide to open the book that was lying nearby.","- It's impolite to read someone's journal, you know?", "The voice is very loud.", "Loud enough to make you drop the book and start looking around for the source of it", "- Look up.", "You gaze at the ceiling only to see nothing.", "- Oh come on, is it your brain that’s got frozen or your ears?"])
+		yield(self, "chain_finished")
+		toggle_character_visible()
+		make_monologue_chain("id_something", ["This is quite a turnaroud.", "That small part of your brain that is still trying to function properly almost immediately admits, that", "a talking trophy deer head hanging from the wall in front of you must be most surprising thing that has happened to you this morning.", "- It would also be nice to at least explain what the buck are you doing in here?", "The head looks quite impatient and hostile….for a head.", "And you look rather lost.", "Thee Deer's sight falls on the fireplace.", "- To be honest, that was kinda nice of you, I was close to feel some shivers inside...",
+		"The head takes another look at you.", "This time it seems much more welcoming.", "- I guess you might even be useful in a particular occasion…..since I am a little “short-handed” at the moment.", "...............", "Alright, fine. You can rest in here on the couch", "There are a lot of things in your head, and sleeping is not one of them, you think.", "But your body takes the leadership one more time and drags itself on the couch where you immediately doze off."])
+		yield(self, "chain_finished")
+		get_node("..").enter_to_map()
 		
 	if math_model.roundCounter == 2:
 		toggle_character_visible()

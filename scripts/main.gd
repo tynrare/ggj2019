@@ -26,15 +26,21 @@ func enter_to_home():
 	get_node("map").visible = false;
 	get_node("map/ui").visible = false;
 
+var quest1starter = false;
 var quest1result = true;
 func _card_played(card):
 	match card.region:
 		"quest1":
+			quest1starter = true
 			if card.id != "true": 
 				quest1result = false;
 
+
 func _round_ended():
-	pass
+	if quest1starter && quest1result:
+		get_node("dialogue_screen").questItem1 = true;
+	elif quest1starter && !quest1result:
+		get_node("dialogue_screen").questProgress1 = true;
 
 func diversificate_math_model():
 	#start quest

@@ -1,9 +1,11 @@
 extends Control
 
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 var questItem0 = false;
+var questPogress1 = false;
 var questItem1 = false;
 var questItem2 = false;
 var questItem3 = false;
@@ -43,6 +45,22 @@ func update_scene():
 		yield(self, "chain_finished")
 		set_location('BG_basement_rendered')
 		make_monologue_chain("id_sooqa", ["You are on your way downstairs when a knife flows right in front of your face."])
+	
+	if math_model.roundCounter > 2 && questItem1 == true:
+		set_character("deer_poses_thinking_flats")
+		set_location('BG_basement_rendered')
+		make_monologue_chain("finisher", ["krasav"])
+		
+		
+	if math_model.roundCounter > 2 && questItem1 == false:
+		set_character("deer_poses_arms_flats")
+		set_location('BG_basement_rendered')
+		make_monologue_chain("finisher2", ["jopa"])
+		
+		
+		
+		
+	
 		
 
 func set_location(name : String):

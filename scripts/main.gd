@@ -38,9 +38,9 @@ func _round_ended():
 
 func diversificate_math_model():
 	#start quest
-	if math_model.roundCounter == 10:
+	if math_model.roundCounter == 1:
 		math_model.mapRegion = 'tutorial';
 		math_model.regionDecks.tutorial = decks_presets.get_deck_cards("tutorial");
-	elif math_model.roundCounter == 1:
+	elif math_model.roundCounter == 2:
 		get_node("map/ui/buttons/go_home_btn").visible = true;
 		math_model.add_deck("quest1");

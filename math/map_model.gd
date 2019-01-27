@@ -4,16 +4,13 @@ extends Node
 # var a = 2
 # var b = "text"
 
-#props
-var maxHandSize = 5;
-
+#properties
 var roundCost = {
 	"wood": 2,
 	"food": 2,
 	"coal": 2
 }
-var avaibleRegions = ["wood", "coal", "food"]
-
+var defaultRegions = ["wood", "coal", "food"]
 #gameState
 var turn = 0
 var roundCounter = 0
@@ -29,6 +26,7 @@ var regionDecks = {
 	"coal": [],
 	"food": []
 }
+var avaibleRegions = defaultRegions.duplicate();
 
 var hand = [];
 
@@ -43,6 +41,7 @@ func begin_round():
 	turn = 0;
 	roundCounter += 1;
 	mapRegion = null;
+	avaibleRegions = defaultRegions.duplicate();
 	gen_decks();
 	
 func end_round():
@@ -63,7 +62,7 @@ func next_turn():
 			begin_round();
 			next_turn();
 			return;
-		var cardsToDraw = min(min(turn, maxHandSize), cardsLeft);
+		var cardsToDraw = min(min(turn, decks_presets.decks[mapRegion].properties.max_hand_size), cardsLeft);
 		for i in range(cardsToDraw):
 			hand.push_back(regionDecks[mapRegion].pop_back());
 		
@@ -83,7 +82,7 @@ func get_resource(chance : float, count : int = 1) -> Dictionary:
 	return {"chance": chance, "count": count}
 	
 func gen_decks() -> void:
-	var decks = get_node("/root/decks_presets").decks;
+	var decks = decks_presets.decks.cards;
 	for key in avaibleRegions:
 		var d = decks[key].duplicate();
 		while d.size():

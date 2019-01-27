@@ -17,7 +17,8 @@ func _ready():
 
 func enter_to_map():
 	get_node("dialogue_screen").visible = false;
-	gameModel.begin_round();	
+	gameModel.begin_round();
+	diversificate_math_model();
 	get_node("map").visible = true;
 	
 func enter_to_home():
@@ -25,6 +26,9 @@ func enter_to_home():
 	get_node("dialogue_screen").update_scene();
 	get_node("map").visible = false;
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func diversificate_math_model():
+	
+	#start quest
+	if gameModel.roundCounter == 0:
+		gameModel.mapRegion = 'quest';
+		gameModel.regionDecks.quest = [];

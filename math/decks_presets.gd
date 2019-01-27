@@ -1,8 +1,26 @@
 extends Node
 var decks = {
-	"wood": [],
-	"coal": [],
-	"food": []
+	"wood": {
+		"cards": [],
+		"properties":{
+			"max_hand_size": 5,
+			"increaseHandSizeBy": 1 #not used
+		}
+	},
+	"coal": {
+		"cards": [],
+		"properties":{
+			"max_hand_size": 5,
+			"increaseHandSizeBy": 1 #not used
+		}
+	},
+	"food": {
+		"cards": [],
+		"properties":{
+			"max_hand_size": 5,
+			"increaseHandSizeBy": 1 #not used
+		}
+	}
 }
 
 func _ready():
@@ -56,7 +74,7 @@ func _mr(chance : float, count : int = 1, type : String = "") -> Dictionary:
 	return {"chance": chance, "count": count, "type": type}
 
 func _add_card_d(region : String, list : Array):
-	decks[region].push_back({
+	decks[region].cards.push_back({
 		"resources":list,
 		"region": region
 	});
@@ -75,7 +93,7 @@ func _add_card(region : String, wood, food, coal):
 		coal.type = "coal"
 		resources.push_back(coal);
 
-	decks[region].push_back({
+	decks[region].cards.push_back({
 			"resources":resources,
 			"region": region
 		});

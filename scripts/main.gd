@@ -26,8 +26,10 @@ func enter_to_home():
 
 func diversificate_math_model():
 	#start quest
-	if math_model.roundCounter == 1:
+	print(1)
+	if math_model.roundCounter == 10:
 		math_model.mapRegion = 'tutorial';
 		math_model.regionDecks.tutorial = decks_presets.get_deck_cards("tutorial");
-	elif math_model.roundCounter == 2:
+	elif math_model.roundCounter == 1:
 		get_node("map/ui/buttons/go_home_btn").visible = true;
+		math_model.add_deck("quest1");

@@ -30,6 +30,7 @@ func update_scene():
 func update():
 	_clear_navpoints();
 	gen_navpoints();
+	update_inventory_text();
 	get_node("ui/buttons/select_btn").visible = false;
 
 func gen_navpoints():
@@ -76,6 +77,16 @@ func get_base_translation(card) -> Vector2:
 func set_ui_text(text : String):
 	var l = get_node("ui/label")
 	l.visible = true;
+	l.text = text;
+
+func update_inventory_text():
+	var m = math_model
+	var l = get_node("ui/inventory")
+	var text = "";
+	for key in m.inventory:
+		text += "> " + key + ": x" + String(m.inventory[key]) + " <\n";
+	
+	text.erase(text.length() - 2, 2);
 	l.text = text;
 
 var selected_point = null

@@ -78,7 +78,7 @@ func play_card(handIndex : int):
 		mapRegion = playedCard.region
 	
 	for res in playedCard.resources:
-		if rand_range(0, 1) >= res.chance:
+		if rand_range(0, 1) <= res.chance:
 			inventory[res.type] += res.count;
 	
 	next_turn();

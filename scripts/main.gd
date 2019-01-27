@@ -4,22 +4,18 @@ extends Node
 # var a = 2
 # var b = "text"
 
-var gameModel;
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	gameModel = get_node("game_model");
-	get_node("dialogue_screen").gameModel = gameModel;
-	
-	enter_to_home();
-	
+	enter_to_map();
 	pass # Replace with function body.
 
 func enter_to_map():
 	get_node("dialogue_screen").visible = false;
-	gameModel.begin_round();
+	math_model.begin_round();
 	diversificate_math_model();
+	math_model.next_turn();
 	get_node("map").visible = true;
+	get_node("map").update_scene();
 	
 func enter_to_home():
 	get_node("dialogue_screen").visible = true;
@@ -27,9 +23,7 @@ func enter_to_home():
 	get_node("map").visible = false;
 
 func diversificate_math_model():
-	
 	#start quest
-	if gameModel.roundCounter == 0:
-		gameModel.mapRegion = 'quest';
-		gameModel.regionDecks.quest = [];
-		
+	if math_model.roundCounter == 1:
+		math_model.mapRegion = 'tutorial';
+		math_model.regionDecks.tutorial = decks_presets.get_deck_cards("tutorial");

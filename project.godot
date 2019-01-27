@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 decks_presets="*res://math/decks_presets.gd"
+math_model="*res://math/math_model.gd"
 
 [rendering]
 

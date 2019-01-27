@@ -12,6 +12,7 @@ var roundCost = {
 }
 var defaultRegions = ["wood", "coal", "food"]
 #gameState
+var playing = false;
 var turn = 0
 var roundCounter = 0
 
@@ -33,11 +34,15 @@ var hand = [];
 var mapRegion = null;
 
 func _ready():
-	turn = 0;
-	roundCounter = 0;
+	init();
 	pass # Replace with function body.
 
+func init():
+	turn = 0;
+	roundCounter = 0;
+
 func begin_round():
+	playing = true;
 	turn = 0;
 	roundCounter += 1;
 	mapRegion = null;
@@ -45,6 +50,7 @@ func begin_round():
 	gen_decks();
 	
 func end_round():
+	playing = false;
 	for key in roundCost:
 		inventory[key] -= roundCost[key];
 
@@ -59,12 +65,11 @@ func next_turn():
 	else:
 		var cardsLeft = regionDecks[mapRegion].size();
 		if cardsLeft == 0:
-			begin_round();
-			next_turn();
+			end_round();
 			return;
-		var cardsToDraw = min(min(turn, decks_presets.decks[mapRegion].properties.max_hand_size), cardsLeft);
+		var cardsToDraw = min(min(turn, decks_presets.get_deck_props(mapRegion).max_hand_size), cardsLeft);
 		for i in range(cardsToDraw):
-			hand.push_back(regionDecks[mapRegion].pop_back());
+			hand.push_back(regionDecks[mapRegion].pop_front());
 		
 func play_card(handIndex : int):
 	var playedCard = hand[handIndex];
@@ -82,9 +87,8 @@ func get_resource(chance : float, count : int = 1) -> Dictionary:
 	return {"chance": chance, "count": count}
 	
 func gen_decks() -> void:
-	var decks = decks_presets.decks.cards;
 	for key in avaibleRegions:
-		var d = decks[key].duplicate();
+		var d = decks_presets.get_deck_cards(key);
 		while d.size():
 			var i = randi()%d.size();
 			regionDecks[key].push_back(d[i]);

@@ -6,16 +6,13 @@ extends Control
 
 signal chain_finished
 
-# надо вручную проставлять
-var gameModel = null;
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 	
 func update_scene():
 	#example
-	if gameModel.roundCounter == 0:
+	if math_model.roundCounter == 1:
 		set_location('BG_basement_rendered')
 		set_character("deer_poses_norm_line_flats")
 		toggle_character_visible()

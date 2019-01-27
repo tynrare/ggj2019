@@ -1,29 +1,42 @@
 extends Node
-var decks = {
+
+func get_deck_cards(key : String):
+	return _decks[key].cards.duplicate();
+	
+func get_deck_props(key : String):
+	return _decks[key].props.duplicate();
+
+var _decks = {
 	"wood": {
 		"cards": [],
-		"properties":{
+		"props":{
 			"max_hand_size": 5,
-			"increaseHandSizeBy": 1 #not used
 		}
 	},
 	"coal": {
 		"cards": [],
-		"properties":{
+		"props":{
 			"max_hand_size": 5,
-			"increaseHandSizeBy": 1 #not used
 		}
 	},
 	"food": {
 		"cards": [],
-		"properties":{
+		"props":{
 			"max_hand_size": 5,
-			"increaseHandSizeBy": 1 #not used
+		}
+	},
+	"tutorial":{
+		"cards": [],
+		"props":{
+			"max_hand_size": 1,
 		}
 	}
 }
 
 func _ready():
+	#
+	# Usual
+	#
 	_add_card_d("wood", [ _mr(1, 1, "wood"), _mr(0.5, 1, "wood") ]);
 	_add_card("wood", _mr(1), _mr(0.5), null);
 	_add_card("wood", _mr(1), _mr(0.6), null);
@@ -69,13 +82,27 @@ func _ready():
 	_add_card("food", _mr(1), _mr(1), null);
 	_add_card("food", _mr(0,5), _mr(0.5), _mr(1));
 	_add_card("food", _mr(0,3), _mr(0.3), _mr(1));
+	
+	#
+	# Quests
+	#
+	_add_card_spec("tutorial", "Intro blah blah");
+	_add_card_spec("tutorial", "Go there");
+	_add_card_spec("tutorial", "Go here");
 
 func _mr(chance : float, count : int = 1, type : String = "") -> Dictionary:
 	return {"chance": chance, "count": count, "type": type}
 
 func _add_card_d(region : String, list : Array):
-	decks[region].cards.push_back({
+	_decks[region].cards.push_back({
 		"resources":list,
+		"region": region
+	});
+
+func _add_card_spec(region : String, text : String, resources : Array = []):
+	_decks[region].cards.push_back({
+		"resources":resources,
+		"description": text,
 		"region": region
 	});
 
@@ -93,7 +120,7 @@ func _add_card(region : String, wood, food, coal):
 		coal.type = "coal"
 		resources.push_back(coal);
 
-	decks[region].cards.push_back({
+	_decks[region].cards.push_back({
 			"resources":resources,
 			"region": region
 		});

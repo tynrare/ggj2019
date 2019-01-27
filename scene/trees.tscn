@@ -276,18 +276,16 @@ material/0 = null
 
 [node name="1" type="MultiMeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.04823, 0 )
-use_in_baked_light = true
+cast_shadow = 0
 multimesh = SubResource( 16 )
 
 [node name="2" type="MultiMeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.58176, 0 )
 cast_shadow = 0
-use_in_baked_light = true
 multimesh = SubResource( 19 )
 
 [node name="3" type="MultiMeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.46968, 0 )
 cast_shadow = 0
-use_in_baked_light = true
 multimesh = SubResource( 20 )
 

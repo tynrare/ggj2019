@@ -12,7 +12,7 @@ func _ready():
 func enter_to_map():
 	get_node("dialogue_screen").visible = false;
 	math_model.begin_round();
-	diversificate_math_model();
+	#diversificate_math_model();
 	math_model.next_turn();
 	get_node("map").visible = true;
 	get_node("map").update_scene();
@@ -28,3 +28,5 @@ func diversificate_math_model():
 	if math_model.roundCounter == 1:
 		math_model.mapRegion = 'tutorial';
 		math_model.regionDecks.tutorial = decks_presets.get_deck_cards("tutorial");
+	elif math_model.roundCounter == 2:
+		get_node("map/ui/buttons/go_home_btn").visible = true;

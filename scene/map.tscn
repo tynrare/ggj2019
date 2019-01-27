@@ -86,15 +86,15 @@
 [ext_resource path="res://misc/default_theme.tres" type="Theme" id=84]
 [ext_resource path="res://img/forest/house.png" type="Texture" id=85]
 
-[sub_resource type="BakedLightmapData" id=5]
+[sub_resource type="BakedLightmapData" id=1]
 
 bounds = AABB( -77.1663, -24.4827, -72.7166, 154.333, 48.9654, 145.433 )
 cell_space_transform = Transform( 0.027504, 0, 0, 0, 0.027504, 0, 0, 0, 0.027504, 2.12238, 0.673373, 2 )
 cell_subdiv = 3
-octree = PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 3, 141, 3, 63, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 62, 1, 0, 0, 0, 7, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 3, 0, 0, 0, 9, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 3, 142, 3, 63, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 20, 0, 0, 0, 19, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 6, 0, 0, 0, 2, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 3, 134, 3, 57, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 66, 3, 144, 3, 65, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 5, 0, 0, 0, 4, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 18, 0, 0, 0, 17, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 3, 137, 3, 61, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 72, 3, 148, 3, 69, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 3, 141, 3, 64, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 3, 140, 3, 63, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 16, 0, 0, 0, 15, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 12, 0, 0, 0, 8, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 56, 3, 136, 3, 61, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 61, 3, 138, 3, 60, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 11, 0, 0, 0, 10, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 14, 0, 0, 0, 13, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 3, 136, 3, 60, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 3, 138, 3, 60, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 3, 138, 3, 63, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 3, 135, 3, 56, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 68, 3, 145, 3, 65, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 3, 136, 3, 59, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 74, 3, 149, 3, 70, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 3, 134, 3, 57, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 80, 3, 155, 3, 72, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 3, 138, 3, 60, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 78, 3, 155, 3, 71, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 )
+octree = PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 3, 140, 3, 62, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 62, 1, 0, 0, 0, 7, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 3, 0, 0, 0, 9, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 3, 138, 3, 60, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 20, 0, 0, 0, 19, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 6, 0, 0, 0, 2, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 3, 130, 3, 54, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 65, 3, 143, 3, 64, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 5, 0, 0, 0, 4, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 18, 0, 0, 0, 17, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 3, 137, 3, 61, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 72, 3, 148, 3, 69, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 53, 3, 135, 3, 58, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 61, 3, 139, 3, 63, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 16, 0, 0, 0, 15, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 12, 0, 0, 0, 8, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 3, 136, 3, 63, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 61, 3, 138, 3, 60, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 11, 0, 0, 0, 10, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 14, 0, 0, 0, 13, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 3, 136, 3, 60, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 3, 138, 3, 60, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 3, 137, 3, 61, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 3, 135, 3, 56, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 67, 3, 143, 3, 63, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 3, 136, 3, 59, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 73, 3, 148, 3, 68, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 53, 3, 132, 3, 56, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 78, 3, 153, 3, 69, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 3, 136, 3, 59, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 76, 3, 152, 3, 69, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 )
 user_data = [ NodePath("../trees_pivot/trees/GridMap"), ExtResource( 2 ), 0, NodePath("../trees_pivot/trees/GridMap"), ExtResource( 3 ), 1, NodePath("../trees_pivot/trees/GridMap"), ExtResource( 4 ), 2, NodePath("../trees_pivot/trees/GridMap"), ExtResource( 5 ), 3, NodePath("../trees_pivot/trees/GridMap"), ExtResource( 6 ), 4, NodePath("../trees_pivot/trees/GridMap"), ExtResource( 7 ), 5, NodePath("../trees_pivot/trees/GridMap"), ExtResource( 8 ), 6, NodePath("../trees_pivot/trees/GridMap"), ExtResource( 9 ), 7, NodePath("../trees_pivot/trees/GridMap"), ExtResource( 10 ), 8, NodePath("../trees_pivot/trees7/GridMap"), ExtResource( 11 ), 0, NodePath("../trees_pivot/trees7/GridMap"), ExtResource( 12 ), 1, NodePath("../trees_pivot/trees7/GridMap"), ExtResource( 13 ), 2, NodePath("../trees_pivot/trees7/GridMap"), ExtResource( 14 ), 3, NodePath("../trees_pivot/trees7/GridMap"), ExtResource( 15 ), 4, NodePath("../trees_pivot/trees7/GridMap"), ExtResource( 16 ), 5, NodePath("../trees_pivot/trees7/GridMap"), ExtResource( 17 ), 6, NodePath("../trees_pivot/trees7/GridMap"), ExtResource( 18 ), 7, NodePath("../trees_pivot/trees7/GridMap"), ExtResource( 19 ), 8, NodePath("../trees_pivot/trees8/GridMap"), ExtResource( 20 ), 0, NodePath("../trees_pivot/trees8/GridMap"), ExtResource( 21 ), 1, NodePath("../trees_pivot/trees8/GridMap"), ExtResource( 22 ), 2, NodePath("../trees_pivot/trees8/GridMap"), ExtResource( 23 ), 3, NodePath("../trees_pivot/trees8/GridMap"), ExtResource( 24 ), 4, NodePath("../trees_pivot/trees8/GridMap"), ExtResource( 25 ), 5, NodePath("../trees_pivot/trees8/GridMap"), ExtResource( 26 ), 6, NodePath("../trees_pivot/trees8/GridMap"), ExtResource( 27 ), 7, NodePath("../trees_pivot/trees8/GridMap"), ExtResource( 28 ), 8, NodePath("../trees_pivot/trees9/GridMap"), ExtResource( 29 ), 0, NodePath("../trees_pivot/trees9/GridMap"), ExtResource( 30 ), 1, NodePath("../trees_pivot/trees9/GridMap"), ExtResource( 31 ), 2, NodePath("../trees_pivot/trees9/GridMap"), ExtResource( 32 ), 3, NodePath("../trees_pivot/trees9/GridMap"), ExtResource( 33 ), 4, NodePath("../trees_pivot/trees9/GridMap"), ExtResource( 34 ), 5, NodePath("../trees_pivot/trees9/GridMap"), ExtResource( 35 ), 6, NodePath("../trees_pivot/trees9/GridMap"), ExtResource( 36 ), 7, NodePath("../trees_pivot/trees9/GridMap"), ExtResource( 37 ), 8, NodePath("../trees_pivot/trees5/GridMap"), ExtResource( 38 ), 0, NodePath("../trees_pivot/trees5/GridMap"), ExtResource( 39 ), 1, NodePath("../trees_pivot/trees5/GridMap"), ExtResource( 40 ), 2, NodePath("../trees_pivot/trees5/GridMap"), ExtResource( 41 ), 3, NodePath("../trees_pivot/trees5/GridMap"), ExtResource( 42 ), 4, NodePath("../trees_pivot/trees5/GridMap"), ExtResource( 43 ), 5, NodePath("../trees_pivot/trees5/GridMap"), ExtResource( 44 ), 6, NodePath("../trees_pivot/trees5/GridMap"), ExtResource( 45 ), 7, NodePath("../trees_pivot/trees5/GridMap"), ExtResource( 46 ), 8, NodePath("../trees_pivot/trees6/GridMap"), ExtResource( 47 ), 0, NodePath("../trees_pivot/trees6/GridMap"), ExtResource( 48 ), 1, NodePath("../trees_pivot/trees6/GridMap"), ExtResource( 49 ), 2, NodePath("../trees_pivot/trees6/GridMap"), ExtResource( 50 ), 3, NodePath("../trees_pivot/trees6/GridMap"), ExtResource( 51 ), 4, NodePath("../trees_pivot/trees6/GridMap"), ExtResource( 52 ), 5, NodePath("../trees_pivot/trees6/GridMap"), ExtResource( 53 ), 6, NodePath("../trees_pivot/trees6/GridMap"), ExtResource( 54 ), 7, NodePath("../trees_pivot/trees6/GridMap"), ExtResource( 55 ), 8, NodePath("../trees_pivot/trees2/GridMap"), ExtResource( 56 ), 0, NodePath("../trees_pivot/trees2/GridMap"), ExtResource( 57 ), 1, NodePath("../trees_pivot/trees2/GridMap"), ExtResource( 58 ), 2, NodePath("../trees_pivot/trees2/GridMap"), ExtResource( 59 ), 3, NodePath("../trees_pivot/trees2/GridMap"), ExtResource( 60 ), 4, NodePath("../trees_pivot/trees2/GridMap"), ExtResource( 61 ), 5, NodePath("../trees_pivot/trees2/GridMap"), ExtResource( 62 ), 6, NodePath("../trees_pivot/trees2/GridMap"), ExtResource( 63 ), 7, NodePath("../trees_pivot/trees2/GridMap"), ExtResource( 64 ), 8, NodePath("../trees_pivot/trees3/GridMap"), ExtResource( 65 ), 0, NodePath("../trees_pivot/trees3/GridMap"), ExtResource( 66 ), 1, NodePath("../trees_pivot/trees3/GridMap"), ExtResource( 67 ), 2, NodePath("../trees_pivot/trees3/GridMap"), ExtResource( 68 ), 3, NodePath("../trees_pivot/trees3/GridMap"), ExtResource( 69 ), 4, NodePath("../trees_pivot/trees3/GridMap"), ExtResource( 70 ), 5, NodePath("../trees_pivot/trees3/GridMap"), ExtResource( 71 ), 6, NodePath("../trees_pivot/trees3/GridMap"), ExtResource( 72 ), 7, NodePath("../trees_pivot/trees3/GridMap"), ExtResource( 73 ), 8, NodePath("../trees_pivot/trees4/GridMap"), ExtResource( 74 ), 0, NodePath("../trees_pivot/trees4/GridMap"), ExtResource( 75 ), 1, NodePath("../trees_pivot/trees4/GridMap"), ExtResource( 76 ), 2, NodePath("../trees_pivot/trees4/GridMap"), ExtResource( 77 ), 3, NodePath("../trees_pivot/trees4/GridMap"), ExtResource( 78 ), 4, NodePath("../trees_pivot/trees4/GridMap"), ExtResource( 79 ), 5, NodePath("../trees_pivot/trees4/GridMap"), ExtResource( 80 ), 6, NodePath("../trees_pivot/trees4/GridMap"), ExtResource( 81 ), 7, NodePath("../trees_pivot/trees4/GridMap"), ExtResource( 82 ), 8 ]
 
-[sub_resource type="ProceduralSky" id=1]
+[sub_resource type="ProceduralSky" id=2]
 
 sky_top_color = Color( 0, 0.443137, 0.67451, 1 )
 sky_horizon_color = Color( 1, 1, 1, 1 )
@@ -103,10 +103,10 @@ ground_bottom_color = Color( 0.419608, 0.486275, 0.494118, 1 )
 ground_horizon_color = Color( 0.807843, 0.807843, 0.807843, 1 )
 ground_curve = 0.0282844
 
-[sub_resource type="Environment" id=2]
+[sub_resource type="Environment" id=3]
 
 background_mode = 1
-background_sky = SubResource( 1 )
+background_sky = SubResource( 2 )
 background_color = Color( 0.545098, 0.545098, 0.545098, 1 )
 ambient_light_color = Color( 0.505882, 0.505882, 0.505882, 1 )
 fog_enabled = true
@@ -127,7 +127,7 @@ adjustment_enabled = true
 adjustment_brightness = 0.85
 adjustment_saturation = 1.8
 
-[sub_resource type="GDScript" id=3]
+[sub_resource type="GDScript" id=4]
 
 script/source = "extends OmniLight
 
@@ -145,7 +145,7 @@ func _process(delta):
 #	pass
 "
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=5]
 
 bg_color = Color( 0.152941, 0.152941, 0.152941, 0.654902 )
 
@@ -162,7 +162,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9192, 8.52301, 0 )
 bake_cell_size = 64.0
 bake_quality = 0
 bake_extents = Vector3( 77.1663, 24.4827, 72.7166 )
-light_data = SubResource( 5 )
+light_data = SubResource( 1 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.834583, 0.425807, -0.349514, -0.240844, 0.852647, 0.463668, 0.495445, -0.302791, 0.814157, 0, 5.64105, 0 )
@@ -171,13 +171,13 @@ light_energy = 0.85
 light_indirect_energy = 2.13
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 2 )
+environment = SubResource( 3 )
 
 [node name="cam_pivot" type="Spatial" parent="WorldEnvironment"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 30, 0 )
 
 [node name="Camera" type="Camera" parent="WorldEnvironment/cam_pivot"]
-transform = Transform( -2.8213e-07, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 1.41065e-07, -2.44332e-07, -0.00289917, -0.129349, 0.0258255 )
+transform = Transform( -2.8213e-007, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 1.41065e-007, -2.44332e-007, -0.00289917, -0.129349, 0.0258255 )
 current = true
 fov = 50.0
 
@@ -189,7 +189,7 @@ light_bake_mode = 2
 shadow_enabled = true
 omni_range = 7.0
 omni_attenuation = 1.46409
-script = SubResource( 3 )
+script = SubResource( 4 )
 
 [node name="trees_pivot" type="Spatial" parent="."]
 editor/display_folded = true
@@ -237,7 +237,7 @@ margin_left = 50.0
 margin_top = -200.0
 margin_right = -50.0
 margin_bottom = -50.0
-custom_styles/normal = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 align = 1
 valign = 1
 autowrap = true
@@ -249,7 +249,7 @@ margin_left = -200.0
 margin_top = 50.0
 margin_right = -50.0
 margin_bottom = 125.0
-custom_styles/normal = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 align = 1
 autowrap = true
 
@@ -280,7 +280,7 @@ flip_h = true
 texture = ExtResource( 85 )
 
 [node name="SpotLight" type="SpotLight" parent="Sprite3D"]
-transform = Transform( -0.0500259, -0.717066, 0.695208, -0.0514657, 0.697005, 0.715217, -0.997421, -3.73492e-09, -0.0717726, 1.52846, 1.01018, -0.992776 )
+transform = Transform( -0.0500259, -0.717066, 0.695208, -0.0514657, 0.697005, 0.715217, -0.997421, -3.73492e-009, -0.0717726, 1.52846, 1.01018, -0.992776 )
 spot_range = 8.08394
 
 [connection signal="pressed" from="ui/buttons/select_btn" to="." method="_on_select_btn_pressed"]
